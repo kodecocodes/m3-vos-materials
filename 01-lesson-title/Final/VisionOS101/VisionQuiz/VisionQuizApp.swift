@@ -6,22 +6,23 @@
 //
 
 import SwiftUI
+//import RealityKit
 
 @main
 struct VisionQuizApp: App {
+    
+    // var for fully immersive view
+    @State private var currentStyle: ImmersionStyle = .full
+    
     var body: some Scene {
-        WindowGroup("Window", id: "window"){
+        WindowGroup(){
             CourseListView()
             //VolumeView()
-        }.windowStyle(.plain)
-        
-        WindowGroup("Immersive", id: "immersive"){
-            CourseListView()
-            //VolumeView()
-        }.windowStyle(.volumetric)
+        }
         
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
-        }
+        } /* show how to be fully immersive */
+          /* .immersionStyle(selection: $currentStyle, in: .full) */
     }
 }
