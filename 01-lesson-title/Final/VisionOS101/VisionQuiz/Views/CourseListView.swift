@@ -14,11 +14,17 @@ struct CourseListView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveScene
     
     let courses = [
-        Course(name: "Window App"),
-        Course(name: "Volume App"),
-        Course(name: "Immersive App"),
-        Course(name: "Ornaments"),
-        Course(name: "App Icon")
+        Course(name: "Window App", content: """
+                         A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
+                         """),
+       Course(name: "Volume App", content: """
+                     A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
+                     """),
+        Course(name: "Immersive App", content: """
+                    An ImmersiveSpace takes over the view. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
+                    """),
+        Course(name: "Ornaments", content: ""),
+        Course(name: "App Icon", content: "")
     ]
     
     @State private var selectedCourse: Course? = nil
@@ -35,9 +41,6 @@ struct CourseListView: View {
             } detail: {
                 if let selectedCourse = selectedCourse {
                     CourseView(course: selectedCourse)
-                    Text("""
-                         A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
-                         """)
                         .padding(30)
                 } else {
                     Text("Select a course from the list to see its details.")
@@ -51,9 +54,6 @@ struct CourseListView: View {
             NavigationSplitView {
                 Text("Volume")
                     .font(.system(size: 30))
-                Text("""
-                     A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
-                     """)
                     .padding(30)
                 Spacer()
             } detail: {
@@ -67,9 +67,6 @@ struct CourseListView: View {
             NavigationSplitView {
                 Text("Immersive")
                     .font(.system(size: 30))
-                Text("""
-                    An ImmersiveSpace takes over the view. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
-                    """)
                     .padding(30)
                 Spacer()
             } detail: {
