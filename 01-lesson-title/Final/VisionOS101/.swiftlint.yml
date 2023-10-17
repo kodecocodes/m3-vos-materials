@@ -1,0 +1,25 @@
+excluded:
+  - DerivedData
+  
+disabled_rules:
+  - orphaned_doc_comment
+ # - line_length
+
+force_cast: warning # 1
+
+identifier_name: # 2
+  excluded:
+    - i
+    - id
+    - x
+    - y
+    - z
+
+line_length:
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_comments: true
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
