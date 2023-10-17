@@ -33,22 +33,21 @@
 import SwiftUI
 
 struct CourseView: View {
-    
-    let course: Course
-    
-    var body: some View {
-        VStack {
-              Text(course.name)
-                .font(.largeTitle)
-                Text(course.content)
-                Spacer()
-            }
-            .navigationTitle(course.name)
+  let course: Course
+
+  var body: some View {
+    VStack {
+      Text(course.name)
+        .font(.largeTitle)
+      Text(course.content)
+      Spacer()
     }
+    .navigationTitle(course.name)
+  }
 }
 
 #Preview {
-    CourseView(course: Course(name: "visionOS", content: """
+  CourseView(course: Course(name: "visionOS", content: """
 This multiline content.
 This multiline content.
 This multiline content.
