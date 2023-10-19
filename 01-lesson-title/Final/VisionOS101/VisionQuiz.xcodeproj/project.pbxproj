@@ -14,21 +14,10 @@
 		2A7E7A492AD8518800A49DB6 /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E7A482AD8518800A49DB6 /* CourseListView.swift */; };
 		2A7E7A4B2AD8518A00A49DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E7A4A2AD8518A00A49DB6 /* Assets.xcassets */; };
 		2A7E7A4E2AD8518A00A49DB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E7A4D2AD8518A00A49DB6 /* Preview Assets.xcassets */; };
-		2A7E7A592AD8518A00A49DB6 /* VisionQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E7A582AD8518A00A49DB6 /* VisionQuizTests.swift */; };
 		2A7E7A912AD8B92100A49DB6 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E7A902AD8B92100A49DB6 /* CourseView.swift */; };
 		2A7E7A932AD8D48E00A49DB6 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E7A922AD8D48E00A49DB6 /* Course.swift */; };
 		2A7E7A972AD9E2B000A49DB6 /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E7A962AD9E2B000A49DB6 /* VolumeView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2A7E7A552AD8518A00A49DB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A7E7A372AD8518800A49DB6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A7E7A3E2AD8518800A49DB6;
-			remoteInfo = VisionQuiz;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2A2023372ADA660600F11319 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
@@ -40,8 +29,6 @@
 		2A7E7A4A2AD8518A00A49DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A7E7A4D2AD8518A00A49DB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A7E7A4F2AD8518A00A49DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A7E7A542AD8518A00A49DB6 /* VisionQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A7E7A582AD8518A00A49DB6 /* VisionQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionQuizTests.swift; sourceTree = "<group>"; };
 		2A7E7A902AD8B92100A49DB6 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		2A7E7A922AD8D48E00A49DB6 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		2A7E7A962AD9E2B000A49DB6 /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
@@ -53,13 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7E7A452AD8518800A49DB6 /* RealityKitContent in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A7E7A512AD8518A00A49DB6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +59,6 @@
 			children = (
 				2A7E7A412AD8518800A49DB6 /* VisionQuiz */,
 				2A7E7A422AD8518800A49DB6 /* Packages */,
-				2A7E7A572AD8518A00A49DB6 /* VisionQuizTests */,
 				2A7E7A402AD8518800A49DB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				2A7E7A3F2AD8518800A49DB6 /* VisionQuiz.app */,
-				2A7E7A542AD8518A00A49DB6 /* VisionQuizTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,14 +99,6 @@
 				2A7E7A4D2AD8518A00A49DB6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2A7E7A572AD8518A00A49DB6 /* VisionQuizTests */ = {
-			isa = PBXGroup;
-			children = (
-				2A7E7A582AD8518A00A49DB6 /* VisionQuizTests.swift */,
-			);
-			path = VisionQuizTests;
 			sourceTree = "<group>";
 		};
 		2A7E7A942AD8D4A100A49DB6 /* Models */ = {
@@ -174,24 +144,6 @@
 			productReference = 2A7E7A3F2AD8518800A49DB6 /* VisionQuiz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A7E7A532AD8518A00A49DB6 /* VisionQuizTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A7E7A5F2AD8518A00A49DB6 /* Build configuration list for PBXNativeTarget "VisionQuizTests" */;
-			buildPhases = (
-				2A7E7A502AD8518A00A49DB6 /* Sources */,
-				2A7E7A512AD8518A00A49DB6 /* Frameworks */,
-				2A7E7A522AD8518A00A49DB6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A7E7A562AD8518A00A49DB6 /* PBXTargetDependency */,
-			);
-			name = VisionQuizTests;
-			productName = VisionQuizTests;
-			productReference = 2A7E7A542AD8518A00A49DB6 /* VisionQuizTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,10 +156,6 @@
 				TargetAttributes = {
 					2A7E7A3E2AD8518800A49DB6 = {
 						CreatedOnToolsVersion = 15.0;
-					};
-					2A7E7A532AD8518A00A49DB6 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 2A7E7A3E2AD8518800A49DB6;
 					};
 				};
 			};
@@ -225,7 +173,6 @@
 			projectRoot = "";
 			targets = (
 				2A7E7A3E2AD8518800A49DB6 /* VisionQuiz */,
-				2A7E7A532AD8518A00A49DB6 /* VisionQuizTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +185,6 @@
 				2A7E7A4E2AD8518A00A49DB6 /* Preview Assets.xcassets in Resources */,
 				2A20233E2ADA715200F11319 /* Water.skybox in Resources */,
 				2A7E7A4B2AD8518A00A49DB6 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A7E7A522AD8518A00A49DB6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,23 +226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A7E7A502AD8518A00A49DB6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A7E7A592AD8518A00A49DB6 /* VisionQuizTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2A7E7A562AD8518A00A49DB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A7E7A3E2AD8518800A49DB6 /* VisionQuiz */;
-			targetProxy = 2A7E7A552AD8518A00A49DB6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2A7E7A5A2AD8518A00A49DB6 /* Debug */ = {
@@ -480,48 +404,6 @@
 			};
 			name = Release;
 		};
-		2A7E7A602AD8518A00A49DB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 476QK54UU2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.VisionQuizTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisionQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisionQuiz";
-				XROS_DEPLOYMENT_TARGET = 1.0;
-			};
-			name = Debug;
-		};
-		2A7E7A612AD8518A00A49DB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 476QK54UU2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.it-guy.VisionQuizTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VisionQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VisionQuiz";
-				XROS_DEPLOYMENT_TARGET = 1.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,15 +421,6 @@
 			buildConfigurations = (
 				2A7E7A5D2AD8518A00A49DB6 /* Debug */,
 				2A7E7A5E2AD8518A00A49DB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A7E7A5F2AD8518A00A49DB6 /* Build configuration list for PBXNativeTarget "VisionQuizTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A7E7A602AD8518A00A49DB6 /* Debug */,
-				2A7E7A612AD8518A00A49DB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
