@@ -34,7 +34,7 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct Course: Identifiable {
+struct Course: Identifiable, Hashable {
   let name: String
   let id = UUID()
 }
@@ -53,9 +53,15 @@ struct ContentListView: View {
   
   var body: some View {
     TabView {
-      NavigationView {
-        List(courses) {
-          Text($0.name)
+      NavigationSplitView {
+        List(courses, selection: $selectedCourse) { course in
+          NavigationLink(course.name, value:course)
+        }
+      } detail: {
+        if let selectedCourse = selectedCourse {
+          CourseView(course: selectedCourse)
+        } else {
+          Text("Select a course from the list to see its details.")
         }
       }
       .tabItem {
