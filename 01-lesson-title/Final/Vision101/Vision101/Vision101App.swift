@@ -36,7 +36,7 @@ import SwiftUI
 struct Vision101App: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      ContentListView()
     }
   }
 }
