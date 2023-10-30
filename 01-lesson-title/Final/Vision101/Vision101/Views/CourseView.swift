@@ -40,11 +40,14 @@ struct CourseView: View {
     VStack {
       Text(course.name)
         .font(.largeTitle)
+      Text(course.content)
+      Spacer()
     }
+    .padding(20)
     .navigationTitle(course.name)
   }
 }
 
 #Preview {
-  CourseView(course: Course(name: "visionOS"))
+  CourseView(course: Course(name: "visionOS", content: "Content"))
 }

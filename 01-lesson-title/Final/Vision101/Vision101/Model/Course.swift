@@ -35,4 +35,5 @@ import Foundation
 struct Course: Identifiable, Hashable {
   let name: String
   let id = UUID()
+  let content: String
 }
