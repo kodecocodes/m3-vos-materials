@@ -34,16 +34,19 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ContentView: View {
+struct ContentListView: View {
   var body: some View {
     TabView {
-      Text("Manual Tab")
-        .font(.system(size: 30, weight: .bold, design: .rounded))
-        .foregroundColor(.orange)
-        .tabItem {
-          Image(systemName: "book.closed")
-          Text("Manual")
+      NavigationView {
+        List {
+          Text("1st Course")
+          Text("2nd Course")
+          Text("3nd Course")
+          Text("4nd Course")
+          Text("5nd Course")
+          Text("6nd Course")
         }
+      }
       Text("Volume Tab")
             .font(.system(size: 30, weight: .bold, design: .rounded))
             .foregroundColor(.orange)
@@ -64,5 +67,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-  ContentView()
+  ContentListView()
 }
