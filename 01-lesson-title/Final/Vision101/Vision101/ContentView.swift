@@ -36,11 +36,28 @@ import RealityKitContent
 
 struct ContentView: View {
   var body: some View {
-    VStack {
-      Model3D(named: "Scene", bundle: realityKitContentBundle)
-        .padding(.bottom, 50)
-      
-      Text("Hello, world!")
+    TabView {
+      Text("Manual Tab")
+        .font(.system(size: 30, weight: .bold, design: .rounded))
+        .foregroundColor(.orange)
+        .tabItem {
+          Image(systemName: "book.closed")
+          Text("Manual")
+        }
+      Text("Volume Tab")
+            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .foregroundColor(.orange)
+            .tabItem {
+                Image(systemName: "cube")
+                Text("Volume")
+            }
+        Text("Immersive Tab")
+            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .foregroundColor(.orange)
+            .tabItem {
+                Image(systemName: "globe")
+                Text("Immersive")
+            }
     }
     .padding()
   }
