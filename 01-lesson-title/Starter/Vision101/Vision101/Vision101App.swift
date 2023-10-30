@@ -34,9 +34,9 @@ import SwiftUI
 
 @main
 struct Vision101App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
