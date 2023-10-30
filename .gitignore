@@ -287,3 +287,19 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# RealityKit Additions
+Packages/RealityKitContent/Package.realitycomposerpro/PluginData/**.*
+Packages/RealityKitContent/Package.realitycomposerpro/WorkspaceData/SceneMetadataList.json
+Packages/RealityKitContent/Package.realitycomposerpro/WorkspaceData/*.rcuserdata
+Packages/RealityKitContent/.build/**.*
+Packages/RealityKitContent/.swiftpm/**.*
