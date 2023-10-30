@@ -34,11 +34,6 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct Course: Identifiable, Hashable {
-  let name: String
-  let id = UUID()
-}
-
 struct ContentListView: View {
   
   @State private var selectedCourse: Course? = nil
