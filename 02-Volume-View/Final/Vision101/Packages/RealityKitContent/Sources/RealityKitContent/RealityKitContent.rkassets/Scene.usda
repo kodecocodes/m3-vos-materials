@@ -12,14 +12,13 @@ def Xform "Root"
         bindMaterialAs = "weakerThanDescendants"
     )
 
-    def "Toy_Drummer" (
+    def "toy_biplane_idle" (
         active = true
-        prepend references = @Drummer.usdz@
+        prepend references = @toy_biplane_idle.usdz@
     )
     {
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0, 0, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, -1.4901161e-8, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }

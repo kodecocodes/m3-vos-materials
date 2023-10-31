@@ -31,11 +31,23 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct VolumeView: View {
-    var body: some View {
-        Text("Hello, World!")
+  var body: some View {
+    //  12
+    RealityView { content in
+      // Add the initial RealityKit content
+      if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+        content.add(scene)
+        // 14
+        scene.availableAnimations.forEach { animation in
+          scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
+        }
+      }
     }
+  }
 }
 
 #Preview {
