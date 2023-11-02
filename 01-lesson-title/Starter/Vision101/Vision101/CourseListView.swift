@@ -34,7 +34,7 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
-struct ContentView: View {
+struct CourseListView: View {
   var body: some View {
     VStack {
       Model3D(named: "Scene", bundle: realityKitContentBundle)
@@ -47,5 +47,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-  ContentView()
+  CourseListView()
 }
