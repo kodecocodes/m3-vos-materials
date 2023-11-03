@@ -83,7 +83,7 @@ struct ContentListView: View {
         }
       
       Text("Immersive Tab")
-        .font(.system(size: 30, weight: .bold, design: .rounded))
+        .font(.largeTitle)
         .foregroundColor(.orange)
         .tabItem {
           Image(systemName: "globe")
