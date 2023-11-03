@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1986E32AF4CCD000C3CA90 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1986E22AF4CCD000C3CA90 /* ImmersiveView.swift */; };
 		2A331CD52AEF74F0009C0DAB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 2A331CD42AEF74F0009C0DAB /* RealityKitContent */; };
 		2A331CDB2AEF74F2009C0DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A331CDA2AEF74F2009C0DAB /* Assets.xcassets */; };
 		2A331CDE2AEF74F2009C0DAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A331CDD2AEF74F2009C0DAB /* Preview Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1986E22AF4CCD000C3CA90 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		2A331CCF2AEF74F0009C0DAB /* Vision101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A331CD32AEF74F0009C0DAB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		2A331CDA2AEF74F2009C0DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				2A331CE72AEF760C009C0DAB /* ContentListView.swift */,
 				2A331CE92AEF7EB3009C0DAB /* CourseView.swift */,
 				2A331CEF2AF09980009C0DAB /* VolumeView.swift */,
+				2A1986E22AF4CCD000C3CA90 /* ImmersiveView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				2A331CED2AEF82C9009C0DAB /* Course.swift in Sources */,
 				2A331CE62AEF75B6009C0DAB /* Vision101App.swift in Sources */,
+				2A1986E32AF4CCD000C3CA90 /* ImmersiveView.swift in Sources */,
 				2A331CF02AF09980009C0DAB /* VolumeView.swift in Sources */,
 				2A331CE82AEF760D009C0DAB /* ContentListView.swift in Sources */,
 				2A331CEA2AEF7EB3009C0DAB /* CourseView.swift in Sources */,
