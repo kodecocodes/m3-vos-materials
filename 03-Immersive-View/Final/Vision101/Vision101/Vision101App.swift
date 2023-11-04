@@ -45,6 +45,6 @@ struct Vision101App: App {
     
     ImmersiveSpace(id: "ImmersiveSpace") {
         ImmersiveView()
-    }
+    }.immersionStyle(selection: $currentStyle, in: .full)
   }
 }
