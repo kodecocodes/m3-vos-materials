@@ -87,8 +87,14 @@ struct ContentListView: View {
           .font(.largeTitle)
           .foregroundColor(.orange)
       } detail: {
-        Button("Open ImmersiveSpace") {
-          //
+        // 20
+        HStack {
+          Button("Open ImmersiveSpace") {
+            
+          }.foregroundColor(.blue)
+          Button("Close ImmersiveSpace") {
+            
+          }.foregroundColor(.red)
         }
       }
         .tabItem {
