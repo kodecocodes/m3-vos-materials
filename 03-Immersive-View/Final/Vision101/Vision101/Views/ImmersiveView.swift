@@ -31,10 +31,17 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import RealityKit
+import RealityKitContent
 
 struct ImmersiveView: View {
     var body: some View {
-        Text("Hello, World!")
+      // 18
+      RealityView { content in
+        if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
+          content.add(scene)
+        }
+      }
     }
 }
 
