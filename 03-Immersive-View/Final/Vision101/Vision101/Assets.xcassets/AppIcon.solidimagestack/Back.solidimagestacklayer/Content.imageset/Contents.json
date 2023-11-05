@@ -1,7 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "reality",
+      "filename" : "lt-grey-square-512@2x.png",
+      "idiom" : "vision",
       "scale" : "2x"
     }
   ],

@@ -1,7 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "reality",
+      "filename" : "symbol-orange-256@2x.png",
+      "idiom" : "vision",
       "scale" : "2x"
     }
   ],
