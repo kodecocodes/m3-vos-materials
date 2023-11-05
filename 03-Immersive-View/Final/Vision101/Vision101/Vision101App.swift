@@ -43,7 +43,7 @@ struct Vision101App: App {
       ContentListView()
     }.windowStyle(.plain)
     
-    ImmersiveSpace(id: "ImmersiveSpace") {
+    ImmersiveSpace(id: "ImmersiveScene") {
         ImmersiveView()
     }.immersionStyle(selection: $currentStyle, in: .full)
   }
