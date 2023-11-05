@@ -46,6 +46,8 @@ struct ImmersiveView: View {
         scene.availableAnimations.forEach { animation in
           scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
         }
+        // step 26
+        scene.orientation = simd_quatf(angle: Float.pi/4, axis: [-0.5, 0.0, 0.0])
         // step 25
         let orbit = OrbitAnimation(duration: 20.0,
                                    axis: SIMD3<Float>(x: 0.1, y: 1.0, z: 0.0),
