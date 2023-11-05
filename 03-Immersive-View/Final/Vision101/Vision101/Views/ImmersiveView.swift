@@ -41,6 +41,25 @@ struct ImmersiveView: View {
       if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
         content.add(scene)
       }
+    } update: { content in
+      if let scene = content.entities.first {
+        scene.availableAnimations.forEach { animation in
+          scene.playAnimation(animation.repeat(), transitionDuration: 3, startsPaused: false)
+        }
+        // step 25
+        let orbit = OrbitAnimation(duration: 20.0,
+                                   axis: SIMD3<Float>(x: 0.1, y: 1.0, z: 0.0),
+                                   startTransform: scene.transform,
+                                   spinClockwise: false,
+                                   orientToPath: true,
+                                   rotationCount: 1.0,
+                                   bindTarget: .transform,
+                                   repeatMode: .repeat)
+        
+        if let animation = try? AnimationResource.generate(with: orbit) {
+          scene.playAnimation(animation)
+        }
+      }
     }.offset(y: -2000) // step 22
       .offset(z: -1500)
   }
