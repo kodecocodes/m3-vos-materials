@@ -37,7 +37,9 @@ import RealityKitContent
 struct ContentListView: View {
   
   @State private var selectedCourse: Course? = nil
-  
+  @Environment(\.openImmersiveSpace) var openImmersiveScene
+  @Environment(\.dismissImmersiveSpace) var dismissImmersiveScene
+
   let courses = [
     Course(name: "Window App", content: """
                            A volume is used to add 3D content to your app. Ut necessitatibus voluptate praesentium id eos eaque itaque cumque. Sunt error et et. Dignissimos veritatis eum ad eius omnis. Pariatur eaque nihil fuga omnis quia. Aperiam corporis odit vero aspernatur in recusandae.Delectus quo sed dolores quo architecto et necessitatibus aut. Velit impedit animi est. Sapiente animi nostrum aperiam quod ut eos. Debitis dicta voluptatem est atque. Soluta iure ipsum iure sed. Natus ut in voluptas et voluptates id
@@ -90,10 +92,18 @@ struct ContentListView: View {
         // 20
         HStack {
           Button("Open ImmersiveSpace") {
-            
+            Task {
+              let result = await openImmersiveScene(id: "ImmersiveScene")
+              if case .error = result {
+                print("Error loading scene.")
+              }
+            }
           }.foregroundColor(.blue)
           Button("Close ImmersiveSpace") {
-            
+            Task {
+              await dismissImmersiveScene()
+              print("Dismissing Complete")
+            }
           }.foregroundColor(.red)
         }
       }
