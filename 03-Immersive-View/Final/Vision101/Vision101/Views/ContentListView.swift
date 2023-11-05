@@ -39,6 +39,8 @@ struct ContentListView: View {
   @State private var selectedCourse: Course? = nil
   @Environment(\.openImmersiveSpace) var openImmersiveScene
   @Environment(\.dismissImmersiveSpace) var dismissImmersiveScene
+  // step 23
+  @State private var isShowingImmersive = false
 
   let courses = [
     Course(name: "Window App", content: """
@@ -55,63 +57,71 @@ struct ContentListView: View {
   ]
   
   var body: some View {
-    TabView {
-      NavigationSplitView {
-        List(courses, selection: $selectedCourse) { course in
-          NavigationLink(course.name, value:course)
+    VStack {
+      TabView {
+        NavigationSplitView {
+          List(courses, selection: $selectedCourse) { course in
+            NavigationLink(course.name, value:course)
+          }
+        } detail: {
+          if let selectedCourse = selectedCourse {
+            CourseView(course: selectedCourse)
+          } else {
+            Text("Select a course from the list to see its details.")
+          }
         }
-      } detail: {
-        if let selectedCourse = selectedCourse {
-          CourseView(course: selectedCourse)
-        } else {
-          Text("Select a course from the list to see its details.")
-        }
-      }
-      .tabItem {
-        Image(systemName: "window.awning.closed")
-        Text("Window")
-      }
-      // 13
-      NavigationSplitView {
-        Text("Volume Tab")
-          .font(.largeTitle)
-          .foregroundColor(.orange)
-      } detail: {
-        VolumeView()
-      }
         .tabItem {
-          Image(systemName: "cube")
-          Text("Volume")
+          Image(systemName: "window.awning.closed")
+          Text("Window")
         }
-      // 15
-      NavigationSplitView {
-        Text("Immersive Tab")
-          .font(.largeTitle)
-          .foregroundColor(.orange)
-      } detail: {
-        // 20
-        HStack {
-          Button("Open ImmersiveSpace") {
-            Task {
-              let result = await openImmersiveScene(id: "ImmersiveScene")
-              if case .error = result {
-                print("Error loading scene.")
+        // 13
+        NavigationSplitView {
+          Text("Volume Tab")
+            .font(.largeTitle)
+            .foregroundColor(.orange)
+        } detail: {
+          VolumeView()
+        }
+          .tabItem {
+            Image(systemName: "cube")
+            Text("Volume")
+          }
+        // 15
+        NavigationSplitView {
+          Text("Immersive Tab")
+            .font(.largeTitle)
+            .foregroundColor(.orange)
+        } detail: {
+          // 20
+          HStack {
+            Button("Open ImmersiveSpace") {
+              Task {
+                let result = await openImmersiveScene(id: "ImmersiveScene")
+                isShowingImmersive = true
+                if case .error = result {
+                  print("Error loading scene.")
+                  isShowingImmersive = false
+                }
               }
-            }
-          }.foregroundColor(.blue)
-          Button("Close ImmersiveSpace") {
-            Task {
-              await dismissImmersiveScene()
-              print("Dismissing Complete")
-            }
-          }.foregroundColor(.red)
+            }.foregroundColor(.blue)
+          }
         }
-      }
-        .tabItem {
-          Image(systemName: "globe")
-          Text("Immersive")
+          .tabItem {
+            Image(systemName: "globe")
+            Text("Immersive")
+          }
+      }.padding()
+        .opacity(isShowingImmersive ? 0 : 1)
+      
+      Button("Close ImmersiveSpace") {
+        Task {
+          await dismissImmersiveScene()
+          print("Dismissing Complete")
+          isShowingImmersive = false
         }
-    }.padding()
+      }.foregroundColor(.red)
+        .opacity(isShowingImmersive ? 1 : 0)
+    }
   }
 }
 
