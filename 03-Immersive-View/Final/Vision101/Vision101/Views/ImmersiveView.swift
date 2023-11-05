@@ -35,14 +35,15 @@ import RealityKit
 import RealityKitContent
 
 struct ImmersiveView: View {
-    var body: some View {
-      // 18
-      RealityView { content in
-        if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
-          content.add(scene)
-        }
+  var body: some View {
+    // 18
+    RealityView { content in
+      if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
+        content.add(scene)
       }
-    }
+    }.offset(y: -2000) // step 22
+      .offset(z: -1500)
+  }
 }
 
 #Preview {
