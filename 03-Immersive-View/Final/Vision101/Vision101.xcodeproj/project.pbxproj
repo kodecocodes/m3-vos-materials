@@ -17,6 +17,7 @@
 		2A331CED2AEF82C9009C0DAB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CEC2AEF82C9009C0DAB /* Course.swift */; };
 		2A331CF02AF09980009C0DAB /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CEF2AF09980009C0DAB /* VolumeView.swift */; };
 		2A9A8D7E2AF76AC100EA512E /* SkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A8D7D2AF76AC100EA512E /* SkyView.swift */; };
+		2A9A8D812AF7716700EA512E /* sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A8D802AF7716600EA512E /* sunlight.skybox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2A331CEC2AEF82C9009C0DAB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		2A331CEF2AF09980009C0DAB /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		2A9A8D7D2AF76AC100EA512E /* SkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyView.swift; sourceTree = "<group>"; };
+		2A9A8D802AF7716600EA512E /* sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; name = sunlight.skybox; path = ../../../../Resources/sunlight.skybox; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		2A331CD12AEF74F0009C0DAB /* Vision101 */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A8D7F2AF7712C00EA512E /* Resources */,
 				2A331CE52AEF75B6009C0DAB /* Vision101App.swift */,
 				2A331CEB2AEF82B3009C0DAB /* Model */,
 				2A331CEE2AEF82F2009C0DAB /* Views */,
@@ -110,6 +113,14 @@
 				2A9A8D7D2AF76AC100EA512E /* SkyView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2A9A8D7F2AF7712C00EA512E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A8D802AF7716600EA512E /* sunlight.skybox */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A331CDE2AEF74F2009C0DAB /* Preview Assets.xcassets in Resources */,
+				2A9A8D812AF7716700EA512E /* sunlight.skybox in Resources */,
 				2A331CDB2AEF74F2009C0DAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

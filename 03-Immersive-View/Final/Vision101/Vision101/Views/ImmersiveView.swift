@@ -43,6 +43,11 @@ struct ImmersiveView: View {
     RealityView { content in
       if let scene = try? await Entity(named: "ImmersiveScene", in: realityKitContentBundle) {
         content.add(scene)
+        // 28
+        guard let resource = try? await EnvironmentResource(named: "Sunlight") else { return }
+        let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 2.0)
+        scene.components.set(iblComponent)
+        scene.components.set(ImageBasedLightReceiverComponent(imageBasedLight: scene))
       }
     } update: { content in
       if let scene = content.entities.first {
