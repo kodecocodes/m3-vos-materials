@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F58ED252AFAA3BB00EBE88D /* sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 0F58ED242AFAA3BA00EBE88D /* sunlight.skybox */; };
 		2A1986E32AF4CCD000C3CA90 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1986E22AF4CCD000C3CA90 /* ImmersiveView.swift */; };
 		2A331CD52AEF74F0009C0DAB /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 2A331CD42AEF74F0009C0DAB /* RealityKitContent */; };
 		2A331CDB2AEF74F2009C0DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A331CDA2AEF74F2009C0DAB /* Assets.xcassets */; };
@@ -17,10 +18,10 @@
 		2A331CED2AEF82C9009C0DAB /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CEC2AEF82C9009C0DAB /* Course.swift */; };
 		2A331CF02AF09980009C0DAB /* VolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A331CEF2AF09980009C0DAB /* VolumeView.swift */; };
 		2A9A8D7E2AF76AC100EA512E /* SkyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A8D7D2AF76AC100EA512E /* SkyView.swift */; };
-		2A9A8D812AF7716700EA512E /* sunlight.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 2A9A8D802AF7716600EA512E /* sunlight.skybox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F58ED242AFAA3BA00EBE88D /* sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = sunlight.skybox; sourceTree = "<group>"; };
 		2A1986E22AF4CCD000C3CA90 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		2A331CCF2AEF74F0009C0DAB /* Vision101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A331CD32AEF74F0009C0DAB /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		2A331CEC2AEF82C9009C0DAB /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		2A331CEF2AF09980009C0DAB /* VolumeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeView.swift; sourceTree = "<group>"; };
 		2A9A8D7D2AF76AC100EA512E /* SkyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyView.swift; sourceTree = "<group>"; };
-		2A9A8D802AF7716600EA512E /* sunlight.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; name = sunlight.skybox; path = ../../../../Resources/sunlight.skybox; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F58ED232AFAA39200EBE88D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F58ED242AFAA3BA00EBE88D /* sunlight.skybox */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2A331CC62AEF74F0009C0DAB = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +76,8 @@
 		2A331CD12AEF74F0009C0DAB /* Vision101 */ = {
 			isa = PBXGroup;
 			children = (
-				2A9A8D7F2AF7712C00EA512E /* Resources */,
 				2A331CE52AEF75B6009C0DAB /* Vision101App.swift */,
+				0F58ED232AFAA39200EBE88D /* Resources */,
 				2A331CEB2AEF82B3009C0DAB /* Model */,
 				2A331CEE2AEF82F2009C0DAB /* Views */,
 				2A331CDA2AEF74F2009C0DAB /* Assets.xcassets */,
@@ -113,14 +121,6 @@
 				2A9A8D7D2AF76AC100EA512E /* SkyView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2A9A8D7F2AF7712C00EA512E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2A9A8D802AF7716600EA512E /* sunlight.skybox */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A331CDE2AEF74F2009C0DAB /* Preview Assets.xcassets in Resources */,
-				2A9A8D812AF7716700EA512E /* sunlight.skybox in Resources */,
+				0F58ED252AFAA3BB00EBE88D /* sunlight.skybox in Resources */,
 				2A331CDB2AEF74F2009C0DAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
