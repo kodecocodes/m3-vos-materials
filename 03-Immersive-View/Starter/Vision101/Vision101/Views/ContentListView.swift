@@ -57,7 +57,8 @@ struct ContentListView: View {
       NavigationSplitView {
         List(courses, selection: $selectedCourse) { course in
           NavigationLink(course.name, value:course)
-        }
+        }.font(.largeTitle)
+          .foregroundColor(.orange)
       } detail: {
         if let selectedCourse = selectedCourse {
           CourseView(course: selectedCourse)
