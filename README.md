@@ -9,4 +9,3 @@ Each version has its own branch, named `versions/[VERSION]`. The default branch 
 | Branch                                                                                  | Version | Release Date |
 | --------------------------------------------------------------------------------------- |:-------:|:------------:|
 | [versions/1.0](https://github.com/kodecocodes/m3-vos-materials/tree/versions/1.0) | 1.0     | 2023-11-21   |
-| [versions/2.0](https://github.com/kodecocodes/m3-vos-materials/tree/versions/2.0) | 2.0     | 2025-12-16   |
